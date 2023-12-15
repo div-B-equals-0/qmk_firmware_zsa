@@ -7,7 +7,6 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 300
 
-#define COMBO_TERM 100
 
 #undef RGB_DISABLE_TIMEOUT
 #define RGB_DISABLE_TIMEOUT 900000
@@ -20,4 +19,9 @@
 #define COMBO_COUNT 10
 
 #define RGB_MATRIX_STARTUP_SPD 60
+
+/* WJH 2023-12-14 Refinements to the key combos for mods */
+#define COMBO_TERM 300			/* Default 100 */
+#define COMBO_MUST_HOLD_MODS
+#define COMBO_HOLD_TERM 150
 
