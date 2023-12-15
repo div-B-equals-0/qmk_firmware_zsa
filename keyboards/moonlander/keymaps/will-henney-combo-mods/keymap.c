@@ -132,28 +132,41 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 };
 
-const uint16_t PROGMEM combo0[] = { KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM combo1[] = { KC_J, KC_SCOLON, COMBO_END};
-const uint16_t PROGMEM combo2[] = { KC_L, KC_K, COMBO_END};
-const uint16_t PROGMEM combo3[] = { KC_F, KC_D, COMBO_END};
-const uint16_t PROGMEM combo4[] = { KC_D, KC_S, COMBO_END};
-const uint16_t PROGMEM combo5[] = { KC_K, KC_L, KC_SCOLON, COMBO_END};
-const uint16_t PROGMEM combo6[] = { KC_D, KC_S, KC_A, COMBO_END};
-const uint16_t PROGMEM combo7[] = { KC_L, KC_SCOLON, COMBO_END};
-const uint16_t PROGMEM combo8[] = { KC_M, KC_K, COMBO_END};
-const uint16_t PROGMEM combo9[] = { KC_V, KC_D, COMBO_END};
+/* Single modifiers are each two adjacent keys on home row */
+const uint16_t PROGMEM combo_RCTL[] = { KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_LCTL[] = { KC_F, KC_D, COMBO_END};
+const uint16_t PROGMEM combo_RALT[] = { KC_L, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_LALT[] = { KC_S, KC_D, COMBO_END};
+/* CMD has inward finger movement */
+const uint16_t PROGMEM combo_RGUI[] = { KC_H, KC_J, COMBO_END};
+const uint16_t PROGMEM combo_LGUI[] = { KC_F, KC_G, COMBO_END};
+/* Double modifiers are on bottom row OPT CTL and CMD CTL */
+const uint16_t PROGMEM combo_RALT_CTL[] = { KC_M, KC_COMMA, COMBO_END};
+const uint16_t PROGMEM combo_LALT_CTL[] = { KC_V, KC_C, COMBO_END};
+const uint16_t PROGMEM combo_RGUI_CTL[] = { KC_COMMA, KC_DOT, COMBO_END};
+const uint16_t PROGMEM combo_LGUI_CTL[] = { KC_C, KC_X, COMBO_END};
+/* And inward finger movement for CMD OPT */
+const uint16_t PROGMEM combo_RGUI_ALT[] = { KC_N, KC_M, COMBO_END};
+const uint16_t PROGMEM combo_LGUI_ALT[] = { KC_B, KC_V, COMBO_END};
+/* Triple modifiers are trigraph on top row */
+const uint16_t PROGMEM combo_RGUI_ALT_CTL[] = { KC_U, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_LGUI_ALT_CTL[] = { KC_R, KC_E, KC_W, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo0, KC_RCTRL),
-    COMBO(combo1, KC_RGUI),
-    COMBO(combo2, RALT(KC_RCTRL)),
-    COMBO(combo3, KC_LCTRL),
-    COMBO(combo4, LALT(KC_LCTRL)),
-    COMBO(combo5, RALT(RGUI(KC_RCTRL))),
-    COMBO(combo6, LALT(LGUI(KC_LCTRL))),
-    COMBO(combo7, RGUI(KC_RALT)),
-    COMBO(combo8, KC_RALT),
-    COMBO(combo9, KC_LALT),
+    COMBO(combo_RCTL, KC_RCTRL),
+    COMBO(combo_LCTL, KC_LCTRL),
+	COMBO(combo_RALT, KC_RALT),
+    COMBO(combo_LALT, KC_LALT),
+    COMBO(combo_RGUI, KC_RGUI),
+    COMBO(combo_LGUI, KC_LGUI),
+    COMBO(combo_RALT_CTL, RALT(KC_RCTRL)),
+	COMBO(combo_LALT_CTL, LALT(KC_LCTRL)),
+    COMBO(combo_RGUI_CTL, RGUI(KC_RCTRL)),
+	COMBO(combo_LGUI_CTL, LGUI(KC_LCTRL)),
+    COMBO(combo_RGUI_ALT, RGUI(KC_RALT)),
+    COMBO(combo_LGUI_ALT, LGUI(KC_RALT)),
+	COMBO(combo_RGUI_ALT_CTL, RALT(RGUI(KC_RCTRL))),
+    COMBO(combo_LGUI_ALT_CTL, LALT(LGUI(KC_LCTRL))),
 };
 
 
