@@ -1,4 +1,5 @@
 /*
+
   Set any config.h overrides for your specific keymap here.
   See config.h options at https://docs.qmk.fm/#/config_options?id=the-configh-file
 */
@@ -6,7 +7,7 @@
 #undef TAPPING_TERM
 #define TAPPING_TERM 300
 
-#define COMBO_TERM 100
+#define COMBO_TERM 50
 
 #undef RGB_DISABLE_TIMEOUT
 #define RGB_DISABLE_TIMEOUT 900000
